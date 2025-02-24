@@ -554,7 +554,7 @@ class BiRefNet:
     @classmethod
     def INPUT_TYPES(s):
         return {
-            "required": {"ckpt_name": ("STRING", {"default": "ZhengPeng7/BiRefNet"})}
+            "required": {"ckpt_name": ("STRING", {"default": "briaai/RMBG-2.0"})}
         }
 
     def remove_bg(self, image, net, transform, device):
