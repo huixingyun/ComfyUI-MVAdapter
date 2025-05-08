@@ -26,7 +26,7 @@ from .mvadapter.schedulers.scheduling_shift_snr import ShiftSNRScheduler
 
 class DiffusersMVPipelineLoader:
     def __init__(self):
-        self.hf_dir = folder_paths.get_folder_paths("diffusers")[0]
+        self.hf_dir = None
         self.dtype = torch.float16
 
     @classmethod
@@ -66,7 +66,7 @@ class DiffusersMVPipelineLoader:
 
 class LdmPipelineLoader:
     def __init__(self):
-        self.hf_dir = folder_paths.get_folder_paths("diffusers")[0]
+        self.hf_dir = None
         self.dtype = torch.float16
 
     @classmethod
@@ -107,7 +107,7 @@ class LdmPipelineLoader:
 
 class DiffusersMVVaeLoader:
     def __init__(self):
-        self.hf_dir = folder_paths.get_folder_paths("diffusers")[0]
+        self.hf_dir = None
         self.dtype = torch.float16
 
     @classmethod
@@ -166,7 +166,7 @@ class LdmVaeLoader:
 
 class DiffusersMVSchedulerLoader:
     def __init__(self):
-        self.hf_dir = folder_paths.get_folder_paths("diffusers")[0]
+        self.hf_dir = None
         self.dtype = torch.float16
 
     @classmethod
@@ -263,7 +263,7 @@ class ControlNetModelLoader:
         self.loaded_controlnet = None
         self.dtype = torch.float16
         self.torch_device = get_torch_device()
-        self.hf_dir = folder_paths.get_folder_paths("diffusers")[0]
+        self.hf_dir = None
 
     @classmethod
     def INPUT_TYPES(s):
@@ -305,7 +305,7 @@ class ControlNetModelLoader:
 
 class DiffusersMVModelMakeup:
     def __init__(self):
-        self.hf_dir = folder_paths.get_folder_paths("diffusers")[0]
+        self.hf_dir = None
         self.torch_device = get_torch_device()
         self.dtype = torch.float16
 
@@ -541,7 +541,7 @@ class DiffusersMVSampler:
 
 class BiRefNet:
     def __init__(self):
-        self.hf_dir = folder_paths.get_folder_paths("diffusers")[0]
+        self.hf_dir = None
         self.torch_device = get_torch_device()
         self.dtype = torch.float32
 
